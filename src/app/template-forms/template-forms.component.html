@@ -1,0 +1,22 @@
+<h2>Template Forms</h2>
+
+<form #f="ngForm" novalidate>
+  <div ngModelGroup="profileForm" #nameCtrl="ngModelGroup">
+    <div>
+      First Name:
+      <input name="first" ngModel required #first="ngModel" />
+    </div>
+    <div>Last Name:
+      <input name="last" ngModel />
+    </div>
+    <div>
+      Subscribe:
+      <input name="subscribed" type="checkbox" ngModel />
+    </div>
+  </div>
+
+  <div>
+    <div>Disabled: <input name="foo" ngModel disabled /></div>
+    <button>Submit</button>
+  </div>
+</form>

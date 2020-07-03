@@ -1,0 +1,23 @@
+<h2>Reactive Forms</h2>
+
+<form [formGroup]="profileForm" novalidate>
+  <div>
+    <div>
+      First Name:
+      <input type="text" formControlName="name" />
+    </div>
+
+    <div>
+      Last Name:
+      <input type="text" formControlName="last" />
+    </div>
+
+    <div>
+      Subscribe:
+      <input name="subscribed" type="checkbox" ngModel />
+    </div>
+
+    <div>Disabled: <input name="foo" ngModel disabled /></div>
+    <button>Submit</button>
+  </div>
+</form>

@@ -15,7 +15,7 @@
     "@angular/common": "~10.0.0",
     "@angular/compiler": "~10.0.0",
     "@angular/core": "~10.0.0",
-    "@angular/forms": "~10.0.0",
+    "@angular/forms": "https://753591-24195339-gh.circle-artifacts.com/0/angular/forms-pr37821-94af248df8.tgz",
     "@angular/platform-browser": "~10.0.0",
     "@angular/platform-browser-dynamic": "~10.0.0",
     "@angular/router": "~10.0.0",
