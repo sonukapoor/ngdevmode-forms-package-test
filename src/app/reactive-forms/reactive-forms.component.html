@@ -1,23 +1,23 @@
-<h2>Reactive Forms</h2>
-
-<form [formGroup]="profileForm" novalidate>
+<form [formGroup]="profileForm">
   <div>
-    <div>
-      First Name:
-      <input type="text" formControlName="name" />
-    </div>
-
-    <div>
-      Last Name:
-      <input type="text" formControlName="last" />
-    </div>
-
-    <div>
-      Subscribe:
-      <input name="subscribed" type="checkbox" ngModel />
-    </div>
-
-    <div>Disabled: <input name="foo" ngModel disabled /></div>
-    <button>Submit</button>
+    First Name:
+    <input type="text" formControlName="firstName" />
   </div>
+  <div>
+    Last Name:
+    <input type="text" formControlName="lastName" />
+  </div>
+
+  <div>
+    Subscribe:
+    <input type="checkbox" formControlName="subscribed" />
+  </div>
+
+  <div>Disabled: <input formControlName="disabledInput" /></div>
+  <div formArrayName="addresses" *ngFor="let item of itemControls; let i = index">
+    <div [formGroupName]="i">
+      <div>City: <input formControlName="city" /></div>
+    </div>
+  </div>
+  <button (click)="addItem()">Add</button>
 </form>
